@@ -17,6 +17,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import downloadUrl from "../ethics.pdf";
+
 function Profile() {
   const { t } = useTranslation();
 
@@ -64,15 +66,23 @@ function Profile() {
         <div className="overlay"></div>
         <div className="container">
           <div className="page-header-content-area">
-            <h4 className="ph-title">{t('Profile')}</h4>
+            <h4 className="ph-title">{t("Profile")}</h4>
             <ul className="lab-ul">
               <li>
-                <a href="/"> {t('Home')}</a>
+                <a href="/"> {t("Home")}</a>
               </li>
               <li>
-                <a className="active"> {t('Profile')}</a>
+                <a className="active"> {t("Profile")}</a>
               </li>
             </ul>
+            <div className="text-center text-xl mt-2">
+              <a href={downloadUrl} download style={{ color: "#B5408F" }}>
+                <button>
+                  {" "}
+                  <i class="icofont-download text-3xl w-full"></i> {t("Ethics")}
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +187,7 @@ function Profile() {
                         className="lab-btn"
                         // onClick={refreshData}
                       >
-                        <span> {t('Update Profile')}</span>
+                        <span> {t("Update Profile")}</span>
                       </button>
                     </form>
                   </div>
@@ -248,7 +258,10 @@ function Profile() {
                         user?.result?.phone &&
                         user?.result?.profession ? (
                           <div className="contact-info-details">
-                            <span className="fw-bold"> {t('Your Code QR')}</span>
+                            <span className="fw-bold">
+                              {" "}
+                              {t("Your Code QR")}
+                            </span>
                             <p>
                               {user && (
                                 <div
@@ -275,8 +288,8 @@ function Profile() {
                           </div>
                         ) : (
                           <div>
-                             {t('Complete Your Profile Please')}<br /> to get your
-                            Event Pass
+                            {t("Complete Your Profile Please")}
+                            <br /> to get your Event Pass
                           </div>
                         )}
                       </div>

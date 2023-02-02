@@ -273,7 +273,7 @@ function Session() {
                                     value={session?.checkIn.length}
                                     key={session?.checkIn?._id}
                                   >
-                                    {session?.checkIn.length} - Attendee
+                                    {session?.checkIn?.users?.length} - Attendee
                                   </option>
                                   {session?.checkIn.map((attendee) =>
                                     attendee.users.map((user) => (

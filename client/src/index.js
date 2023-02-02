@@ -86,6 +86,7 @@ i18n
           "Reset Now": "Reset Your Password Now",
           Reset: "Reset Password",
           Continue: "Continue",
+          Ethics: "Speak Up - ethics MALL 2023",
         },
       },
       ar: {
@@ -152,6 +153,7 @@ i18n
           "Reset Now": "أعد تعيين كلمة المرور الخاصة بك الآن",
           Reset: "إعادة تعيين كلمة المرور",
           Continue: "مواصلة",
+          Ethics: "الميثاق الأخلاقي لمول 2023",
         },
       },
     },

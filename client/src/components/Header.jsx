@@ -129,11 +129,11 @@ function Header() {
                     <ul className="menu">
                       {user && user?.result?.role === 0 && (
                         <>
-                          <li>
+                          {/* <li>
                             <a href="/" className="hover:text-pink-600">
                               {t("Home")}
                             </a>
-                          </li>
+                          </li> */}
                           <li>
                             <a href="/gallery" className="hover:text-pink-600">
                               {t("Gallery")}
@@ -170,11 +170,11 @@ function Header() {
 
                       {user && user.result.role === 2 && (
                         <>
-                          <li>
+                          {/* <li>
                             <a href="/" className="hover:text-pink-600">
                               {t("Home")}
                             </a>
-                          </li>
+                          </li> */}
                           {/* <li>
                             <a href="/room">Rooms</a>
                           </li>{" "} */}
@@ -227,11 +227,11 @@ function Header() {
                 ) : (
                   <div className="menu-area">
                     <ul className="menu">
-                      <li>
+                      {/* <li>
                         <a href="/" className="hover:text-pink-600">
                           {t("Home")}
                         </a>
-                      </li>
+                      </li> */}
                       <Link to="/login" className=" ticket-btn lab-btn  ">
                         <span className="hover:text-pink-600">
                           {" "}
