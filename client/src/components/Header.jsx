@@ -57,15 +57,15 @@ function Header() {
             <div className="container">
               <div className="header-wrapper">
                 <div className="logo flex">
-                  <a href="/" className="text-5xl w-44 h-16 ">
+                  <a href="/" className="text-5xl md:w-24 w-16">
                     <img
-                      src="assets/images/logo/mac2023-02.png"
+                      src="assets/images/logo/integrity.png"
                       className="rounded-none"
                       alt="logo"
                     />
                     {/* <SiPingdom /> */}
                   </a>{" "}
-                  {currentLang === "ar" ? (
+                  {/* {currentLang === "ar" ? (
                     <a
                       onClick={() => onChange("en")}
                       className="md:my-auto mx-2 "
@@ -83,7 +83,7 @@ function Header() {
                         <i class="icofont-globe text-4xl w-full"></i>
                       </span>
                     </a>
-                  )}
+                  )} */}
                 </div>
 
                 {/* <select
@@ -107,6 +107,25 @@ function Header() {
 
                 {user ? (
                   <div className="menu-area">
+                    {currentLang === "ar" ? (
+                      <a
+                        onClick={() => onChange("en")}
+                        className="md:my-auto mx-2 "
+                      >
+                        <span className="hover:text-pink-600">
+                          <i class="icofont-globe text-3xl w-full"></i>
+                        </span>
+                      </a>
+                    ) : (
+                      <a
+                        onClick={() => onChange("ar")}
+                        className="md:my-auto mx-2"
+                      >
+                        <span className="hover:text-pink-600">
+                          <i class="icofont-globe text-3xl w-full"></i>
+                        </span>
+                      </a>
+                    )}
                     <ul className="menu">
                       {user && user?.result?.role === 0 && (
                         <>
